@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 :root {
   --white-color: #ffffff;
   --link-text: rgba(22, 24, 35, 1);
@@ -11,7 +13,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: SofiaPro,Arial,Tahoma,PingFangSC,sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
