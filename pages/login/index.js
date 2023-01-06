@@ -2,11 +2,15 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import User from 'components/Icons/User'
-import Apple from 'components/Icons/Apple'
 import Google from 'components/Icons/Google'
 import Github from 'components/Icons/Github'
-import Twitter from 'components/Icons/Twitter'
 import Facebook from 'components/Icons/Facebook'
+
+import {
+    signInWithGoogle,
+    signInWithGithub,
+    signInWithFacebook
+} from 'services/client'
 
 import styles from './styles.module.css'
 
@@ -32,31 +36,19 @@ const Login = () => {
                     </div>
                     <p>Usar teléfono/correo/nombre de usuario</p>
                 </div>
-                <div className={styles.login__with}>
+                <div onClick={signInWithFacebook} className={styles.login__with}>
                     <div className={styles.login__icon}>
                         <Facebook />
                     </div>
                     <p>Continuar con Facebook</p>
                 </div>
-                <div className={styles.login__with}>
+                <div onClick={signInWithGoogle} className={styles.login__with}>
                     <div className={styles.login__icon}>
                         <Google />
                     </div>
                     <p>Continuar con Google</p>
                 </div>
-                <div className={styles.login__with}>
-                    <div className={styles.login__icon}>
-                        <Twitter />
-                    </div>
-                    <p>Continuar con Twitter</p>
-                </div>
-                <div className={styles.login__with}>
-                    <div className={styles.login__icon}>
-                        <Apple />
-                    </div>
-                    <p>Continuar con Apple</p>
-                </div>
-                <div className={styles.login__with}>
+                <div onClick={signInWithGithub} className={styles.login__with}>
                     <div className={styles.login__icon}>
                         <Github />
                     </div>
