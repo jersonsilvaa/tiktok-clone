@@ -66,9 +66,9 @@ export const signInWithFacebook = () => {
         })
 }
 
-// export const AuthStateChanged = onchange => {
-//     return onAuthStateChanged(auth, (user) => {
-//         const normalizeUser = user ? mapUserFirebaseAuth(user) : null
-//         onchange(normalizeUser)
-//     })
-// }
+export const authStateChanged = onchange => {
+    return onAuthStateChanged(auth, (user) => {
+        const normalizeUser = user ? mapUserFirebaseAuth(user) : null
+        onchange(normalizeUser)
+    })
+}
