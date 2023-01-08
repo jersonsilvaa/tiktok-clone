@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-
 import { authStateChanged } from 'services/client'
 
 export const STATES = {
@@ -10,7 +9,7 @@ export const STATES = {
 
 const useUser = () => {
     const [user, setUser] = useState(STATES.NOT_KNOWN)
-    
+
     const router = useRouter()
 
     useEffect(() => {
@@ -18,8 +17,10 @@ const useUser = () => {
     }, [])
 
     useEffect(() => {
-        user === STATES.NOT_LOGGED && router.push('/login')
+        user === STATES.NOT_LOGGED && router.push('/')
     }, [user])
+
+    return user
 }
 
 export default useUser
