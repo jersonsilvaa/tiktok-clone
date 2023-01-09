@@ -11,3 +11,21 @@
     display: block;
     object-fit: cover;
 }
+
+.player {
+    inset: 0;
+    width: 62px;
+    height: 62px;
+    margin: auto;
+    border: 0;
+    position: absolute;
+    background-size: contain;
+    background-color: transparent;
+    background-image: url('../../assets/play.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hidden {
+    opacity: 0;
+}
