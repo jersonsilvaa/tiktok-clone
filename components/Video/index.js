@@ -1,10 +1,11 @@
-import clsx from 'clsx'
 import { useRef, useState } from 'react'
+
+import clsx from 'clsx'
 
 import styles from './styles.module.css'
 
 const Video = ({ src }) => {
-    const [playing, setPlaying] = useState(false)
+    const [playing, setPlaying] = useState(true)
 
     const videoRef = useRef(null)
 
@@ -19,8 +20,8 @@ const Video = ({ src }) => {
     const playClassName = clsx(styles.player, {
         [styles.hidden]: !playing
     })
-
-    return (
+ 
+    return <>
         <div className={styles.wrapper}>
             <video
                 loop
@@ -32,7 +33,7 @@ const Video = ({ src }) => {
             />
             <button onClick={handleClick} className={playClassName} />
         </div>
-    )
+    </>
 }
 
 export default Video
