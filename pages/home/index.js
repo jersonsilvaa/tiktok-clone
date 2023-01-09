@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import useUser from 'hooks/useUser'
-import NavBar from 'components/NavBar'
+import MainView from 'components/MainView'
 
 import styles from './styles.module.css'
 
@@ -15,14 +15,13 @@ const Home = () => {
             <link rel='icon' href='favicon.png' />
         </Head>
         {
-             user && <>
+            user && (
                 <div className={styles.app__content}>
                     <div className={styles.app__videos}>
-                        <h1>Contenido principal</h1>
+                        <MainView />
                     </div>
-                    <NavBar />
                 </div>
-            </>
+            )
         }
     </>
 }

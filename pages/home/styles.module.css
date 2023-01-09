@@ -1,26 +1,16 @@
-.app__content {
+.wrapper {
+  gap: 1rem;
   width: 100vw;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.app__videos {
-  width: 640px;
-  height: 360px;
-  position: relative;
-  overflow: scroll;
-  border: 1px solid #000;
-  margin-left: 47px;
-  border-radius: 20px 20px 0 0;
-  scroll-snap-type: y mandatory;
-}
-
-.app__videos::-webkit-scrollbar {
-  display: none;
-}
-
-.app__videos {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.app__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
