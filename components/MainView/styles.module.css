@@ -1,0 +1,25 @@
+.App {
+    display: grid;
+    margin-top: 47px;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__videos {
+    width: 72.5%;
+    height: 500px;
+    position: relative;
+    overflow: scroll;
+    margin-left: 47px;
+    border-radius: 12px 12px 0 0;
+    scroll-snap-type: y mandatory;
+}
+
+.app__videos::-webkit-scrollbar {
+    display: none;
+}
+
+.app__videos {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
