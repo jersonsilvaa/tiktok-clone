@@ -1,0 +1,28 @@
+.wrapper {
+  gap: 40px;
+  color: white;
+  width: 72.6%;
+  display: flex;
+  padding: 20px;
+  border-top: 2px solid white;
+  margin-left: 47px;
+  border-radius: 0 0 20px 20px;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.addVideoButton {
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+  justify-content: center;
+  background-color: white;
+}
+
+.bottomIcon {
+  cursor: pointer;
+  font-size: 40px;
+}
