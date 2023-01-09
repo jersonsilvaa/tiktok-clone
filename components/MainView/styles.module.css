@@ -1,13 +1,13 @@
 .App {
     display: grid;
-    margin-top: 47px;
+    margin-top: 1%;
     align-items: center;
     justify-content: center;
 }
 
 .app__videos {
     width: 72.5%;
-    height: 500px;
+    height: 580px;
     position: relative;
     overflow: scroll;
     margin-left: 47px;
