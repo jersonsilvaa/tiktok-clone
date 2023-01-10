@@ -1,7 +1,9 @@
 .App {
     display: grid;
+    height: 99vh;
     margin-top: 1%;
     align-items: center;
+    align-content: center;
     justify-content: center;
 }
 
