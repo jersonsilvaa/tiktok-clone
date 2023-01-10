@@ -4,12 +4,12 @@ import Marquee from 'react-fast-marquee'
 
 import styles from './styles.module.css'
 
-const SongTicker = ({ songTitle }) => {
+const SongTicker = ({ song }) => {
     return <>
         <div className={styles.song}>
             <MusicIcon />
             <Marquee gradient={false} speed={70}>
-                {songTitle}
+                {song}
             </Marquee>
         </div>
     </>

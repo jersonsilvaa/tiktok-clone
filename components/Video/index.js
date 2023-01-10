@@ -7,7 +7,7 @@ import Sidebar from 'components/Sidebar'
 
 import styles from './styles.module.css'
 
-const Video = ({ src }) => {
+const Video = ({ src, author, description, photoURL, song, likes, comments, shares, albumCover }) => {
     const [playing, setPlaying] = useState(true)
 
     const videoRef = useRef(null)
@@ -35,8 +35,18 @@ const Video = ({ src }) => {
                 className={styles.videoPlayer}
             />
             <button onClick={handleClick} className={playClassName} />
-            <Sidebar />
-            <Footer />
+            <Sidebar
+                photoURL={photoURL}
+                likes={likes}
+                comments={comments}
+                shares={shares}
+            />
+            <Footer
+                author={author}
+                description={description}
+                albumCover={albumCover}
+                song={song}
+            />
         </div>
     </>
 }

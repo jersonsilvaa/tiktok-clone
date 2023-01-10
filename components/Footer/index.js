@@ -3,19 +3,19 @@ import SongTicker from 'components/SongTicker'
 
 import styles from './styles.module.css'
 
-const Footer = ({ albumCover, description = '#bromita que no que sí, vamooo', username = 'devsilva', songTitle = 'Búscandola - Luis Mateus' }) => {
+const Footer = ({ author, description, albumCover, song }) => {
   return <>
     <footer className={styles.description}>
       <div className={styles.textWrapper}>
         <section>
             <p className={styles.author}>
-              @{username}
+              @{author}
             </p>
           <p className={styles.text}>
             {description}
           </p>
         </section>
-        <SongTicker songTitle={songTitle} />
+        <SongTicker song={song} />
       </div>
       <div>
         <AlbumDisk albumCover={albumCover} />
