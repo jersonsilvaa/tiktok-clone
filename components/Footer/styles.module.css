@@ -1,0 +1,57 @@
+.album {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  animation: rotate 4s infinite linear;
+  background: url('../../assets/album.svg');
+  align-items: center;
+  margin-right: -5px;
+  justify-content: center;
+}
+
+.albumImage {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.description {
+  width: 100%;
+  color: #fff;
+  bottom: 0;
+  padding: 0 20px 20px;
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  font-size: 13px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, rgba(255, 255, 255, 0) 60%);
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.author {
+  color: #fff;
+  font-size: 15px;
+}
+
+.text {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.textWrapper {
+  max-width: 275px;
+  padding-right: 32px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
