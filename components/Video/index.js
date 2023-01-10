@@ -2,6 +2,8 @@ import { useRef, useState } from 'react'
 
 import clsx from 'clsx'
 
+import Sidebar from 'components/Sidebar'
+
 import styles from './styles.module.css'
 
 const Video = ({ src }) => {
@@ -32,6 +34,7 @@ const Video = ({ src }) => {
                 className={styles.videoPlayer}
             />
             <button onClick={handleClick} className={playClassName} />
+            <Sidebar />
         </div>
     </>
 }
