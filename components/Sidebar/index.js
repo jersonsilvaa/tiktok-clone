@@ -5,7 +5,7 @@ import Comment from 'components/Icons/Comment'
 
 import styles from './styles.module.css'
 
-const Sidebar = ({ author, photoURL, likes = 12, comments = 34, shares = 35, hearted = false }) => {
+const Sidebar = ({ author, photoURL, likes, comments, shares }) => {
   const handleLike = () => {
     window.alert('Like')
   }
