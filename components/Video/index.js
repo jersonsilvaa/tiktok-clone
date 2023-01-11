@@ -17,7 +17,7 @@ const Video = (props) => {
         [styles.hidden]: playing
     })
 
-    const { src, photoURL, likes, comments, shares, author, description, albumCover, song } = props
+    const { src } = props
  
     return <>
         <div className={styles.wrapper}>
@@ -30,18 +30,8 @@ const Video = (props) => {
                 className={styles.videoPlayer}
             />
             <button onClick={handlePlay} className={playClassName} />
-            <Sidebar
-                photoURL={photoURL}
-                likes={likes}
-                comments={comments}
-                shares={shares}
-            />
-            <Footer
-                author={author}
-                description={description}
-                albumCover={albumCover}
-                song={song}
-            />
+            <Sidebar { ...props }/>
+            <Footer { ...props }/>
         </div>
     </>
 }
