@@ -1,3 +1,4 @@
+import Avatar from 'components/Avatar'
 import Heart from 'components/Icons/Heart'
 import Share from 'components/Icons/Share'
 import Comment from 'components/Icons/Comment'
@@ -18,10 +19,7 @@ const Sidebar = ({ author, photoURL, likes = 12, comments = 34, shares = 35, hea
   }
   return <>
     <aside className={styles.actions}>
-      <div className={styles.user}>
-        <img alt={author} src={photoURL} />
-        <img src='https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/test-2e6dd40439e72f09a8193e27cb3e0c51.svg' width='24' />
-      </div>
+      <Avatar author={author} photoURL={photoURL} />
       <button onClick={handleLike} className={styles.action}>
         <Heart />
         <span title='like'>{likes}</span>
