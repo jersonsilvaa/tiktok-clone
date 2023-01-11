@@ -1,40 +1,33 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import clsx from 'clsx'
 
 import Footer from 'components/Footer'
 import Sidebar from 'components/Sidebar'
+import useIntersectionVideoPlayer from 'hooks/useIntersectionVideo'
 
 import styles from './styles.module.css'
 
 const Video = ({ src, author, description, photoURL, song, likes, comments, shares, albumCover }) => {
-    const [playing, setPlaying] = useState(true)
+    const video = useRef(null)
 
-    const videoRef = useRef(null)
-
-    const handleClick = () => {
-        const { current: videoEl } = videoRef
-
-        playing ? videoEl.play() : videoEl.pause()
-        
-        setPlaying(!playing)
-    }
+    const { playing, handlePlay } = useIntersectionVideoPlayer({ video })
 
     const playClassName = clsx(styles.player, {
-        [styles.hidden]: !playing
+        [styles.hidden]: playing
     })
  
     return <>
         <div className={styles.wrapper}>
             <video
                 loop
-                ref={videoRef}
+                ref={video}
                 src={src}
                 style={{ objectFit: 'cover' }}
-                onClick={handleClick}
+                onClick={handlePlay}
                 className={styles.videoPlayer}
             />
-            <button onClick={handleClick} className={playClassName} />
+            <button onClick={handlePlay} className={playClassName} />
             <Sidebar
                 photoURL={photoURL}
                 likes={likes}
