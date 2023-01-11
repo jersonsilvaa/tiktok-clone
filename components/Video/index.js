@@ -8,7 +8,7 @@ import useIntersectionVideoPlayer from 'hooks/useIntersectionVideo'
 
 import styles from './styles.module.css'
 
-const Video = ({ src, author, description, photoURL, song, likes, comments, shares, albumCover }) => {
+const Video = (props) => {
     const video = useRef(null)
 
     const { playing, handlePlay } = useIntersectionVideoPlayer({ video })
@@ -16,6 +16,8 @@ const Video = ({ src, author, description, photoURL, song, likes, comments, shar
     const playClassName = clsx(styles.player, {
         [styles.hidden]: playing
     })
+
+    const { src, photoURL, likes, comments, shares, author, description, albumCover, song } = props
  
     return <>
         <div className={styles.wrapper}>
