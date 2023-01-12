@@ -1,6 +1,15 @@
+import { useRouter } from 'next/router'
+
 import styles from './styles.module.css'
 
 const CaptionUpload = () => {
+    const router = useRouter()
+    
+    const handleCancel = e => {
+        e.preventDefault()
+        router.replace('/home')
+    }
+
     return <>
         <div className={styles.form}>
             <div className={styles.caption__description}>
@@ -21,7 +30,7 @@ const CaptionUpload = () => {
                         </div>
                         <div className={styles.button__container}>
                             <div className={styles.button__cancel}>
-                                <button className={styles.cancel}>
+                                <button className={styles.cancel} onClick={handleCancel}>
                                     <div className={styles.text__cancel}>
                                         <div className={styles.text}>
                                             Descartar
